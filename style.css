@@ -1,0 +1,88 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  height: 50vh;
+  width: 100%;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.secDiv {
+  height: 40vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  background-color: goldenrod;
+}
+
+.inPut {
+  height: 5vh;
+  width: 29vw;
+  border: 5px solid grey;
+  border-radius: 20%;
+}
+
+.btn {
+  margin: 10px;
+  height: 4vh;
+  width: 13vw;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.secDiv2 {
+  margin-left: 10px;
+  height: 50vh;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  /* border: 1px solid black; */
+}
+
+.h2Div {
+  height: 4.5vh;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.carryOverscroll {
+  height: 42vh;
+  width: 65vw;
+  margin-bottom: 1.5em;
+  overflow: auto;
+  /* border: 1px solid black; */
+}
+.overscroll {
+  background-color: white;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

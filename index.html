@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>MY TO DO APP</h1>
+    <section>
+      <div class="secDiv">
+        <input type="text" placeholder="Enter A Task" class="inPut" />
+        <button class="btn">Submit Entered Task</button>
+      </div>
+      <div class="secDiv2">
+        <div class="h2Div">
+          <h2>MY TASKS</h2>
+        </div>
+        <div class="carryOverscroll">
+          <div class="overscroll">
+            <ul class="taskList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let section = document.querySelector(".section");
+      let div = document.querySelector(".secDiv");
+      let input = document.querySelector(".inPut");
+      let button = document.querySelector(".btn");
+      let list = document.querySelector(".taskList");
+
+      //   let sn = 1;
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        list.innerHTML += `<li><span>  </span> My Task: ${input.value}
+            <button class="delete">Delete</button></li>`;
+        // sn++;
+        input.value = "";
+
+        let delBtn = document.querySelectorAll(".delete");
+        // I'm using selectAll cos I want to be able to reach any number of deletes that the user might input.
+        // So I'll be looping through with .for each using a call back function
+        delBtn.forEach((del) =>
+          del.addEventListener("click", function (event) {
+            event.target.parentElement.remove();
+          })
+        );
+      });
+    </script>
+  </body>
+</html>
